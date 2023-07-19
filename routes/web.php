@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ServiceProviderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +28,7 @@ Route::get('/about', [GeneralController::class, 'about'])->name('about');
 Route::get('/contact', [GeneralController::class, 'contact'])->name('contact');
 
 Route::resource('post', PostController::class);
+
+Route::get("/custom-service-provider", [ServiceProviderController::class, 'customServiceProvider']);
 
 
